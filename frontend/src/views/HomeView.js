@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row } from 'react-bootstrap';
 import Product from '../components/Product';
-import Loader from '../components/Loader.js';
-import Message from '../components/Message.js';
-import { listProducts } from '../actions/productActions.js';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
+import { listProducts } from '../actions/productActions';
 
 const HomeView = () => {
   const dispatch = useDispatch();
