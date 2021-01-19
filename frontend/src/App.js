@@ -8,6 +8,7 @@ import ProductView from './views/ProductView';
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
 import ProfileView from './views/ProfileView';
+import ShippingView from './views/ShippingView';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Header />
       <main className='py-3'>
         <Container>
+          <Route path='/shipping' component={ShippingView} />
           <Route path='/login' component={LoginView} />
           <Route path='/register' component={RegisterView} />
           <Route path='/profile' component={ProfileView} />
