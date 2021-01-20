@@ -30,6 +30,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
   const userExists = await User.findOne({ email });
+
   if (userExists) {
     res.status(400);
     throw new Error('Email is already registered.');
@@ -72,8 +73,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error('User not found.');
   }
-
-  res.send('Success');
+  // res.send('Success');
 });
 
 // @desc      Update user profile
@@ -88,7 +88,9 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     if (req.body.password) {
       user.password = req.body.password;
     }
+
     const updatedUser = await user.save();
+
     res.json({
       _id: updatedUser.id,
       name: updatedUser.name,
