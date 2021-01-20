@@ -12,6 +12,7 @@ import ShippingView from './views/ShippingView';
 import PaymentView from './views/PaymentView';
 import PlaceOrderView from './views/PlaceOrderView';
 import OrderView from './views/OrderView';
+import UserListView from './views/UserListView';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path='/profile' component={ProfileView} />
           <Route path='/product/:id' component={ProductView} />
           <Route path='/cart/:id?' component={CartScreen} />
+          <Route path='/admin/userlist' component={UserListView} />
           <Route path='/' component={HomeView} exact />
         </Container>
       </main>
